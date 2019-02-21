@@ -10,13 +10,16 @@
 	<link href="/css/introHCI.css" rel="stylesheet">
   
 </head>
-
-<body>
+	<body>
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Michael Bernstein</h1>
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
+		{{#if viewAlt}}
+		Min! <button class="btn btn-default likeBtn">Like</button>
+
+		{{else}}
 
 		<h4>Projects</h4>
 		{{#each projects}}
@@ -31,10 +34,20 @@
 				</div>
 			</div>
 		{{/each}}
-
+				{{/if}}
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134738603-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134738603-1');
+</script>
+
 </body>
 </html>
